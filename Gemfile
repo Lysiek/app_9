@@ -12,10 +12,15 @@ gem "puma", "~> 3.7"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.2"
+gem "jquery-rails", "4.3.1"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "sqlite3"
 gem "bcrypt"
+gem "config"
+gem "faker", "1.7.3"
+gem "will_paginate", "3.1.6"
+gem "bootstrap-will_paginate", "1.0.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
