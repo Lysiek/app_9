@@ -31,15 +31,23 @@
 
 en:
   hello: "Hello world"
+  welcome: "Welcome to the Sample App"
+  error_user: "User not found"
+  danger: "Invalid email/password combination"
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
 
     header:
-      content1: "sample app"
-      content2: "Home"
-      content3: "Help"
-      content4: "Log in"
+      sample: "sample app"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+      user: "Users"
+      profile: "Profile"
+      setting: "Settings"
+      logout: "Log out"
+      account: "Account"
 
     footer:
       sm1: "The"
@@ -91,3 +99,14 @@ en:
       title: "Sign up"
       h1: "Sign up"
       p: "This will be a signup page for new users."
+      p1: "Confirmation"
+      t2: "Create my account"
+  shared:
+    error_messages:
+      t1: "The form contains"
+      error: "error"
+  Sessions:
+    new:
+      title: "Log in"
+      signup: "Sign up now!"
+      new: "New user?"
