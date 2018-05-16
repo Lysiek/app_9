@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params_session[:password])
       login_success user
     else
-      flash[:danger] = t "danger"
+      flash[:danger] = t ".danger"
       render :new
     end
   end
