@@ -34,6 +34,7 @@ en:
   welcome: "Welcome to the Sample App"
   error_user: "User not found"
   danger: "Invalid email/password combination"
+
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
@@ -105,8 +106,10 @@ en:
     error_messages:
       t1: "The form contains"
       error: "error"
-  Sessions:
+  sessions:
     new:
       title: "Log in"
       signup: "Sign up now!"
       new: "New user?"
+      login: "Log in"
+      s1: "Remember me on this computer"
