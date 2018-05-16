@@ -34,6 +34,9 @@ en:
   welcome: "Welcome to the Sample App"
   error_user: "User not found"
   danger: "Invalid email/password combination"
+  please_login: "Please log in"
+  user_deleted: "User deleted"
+  profile_update: "Profile update"
 
   layouts:
     application:
@@ -101,11 +104,26 @@ en:
       h1: "Sign up"
       p: "This will be a signup page for new users."
       p1: "Confirmation"
-      t2: "Create my account"
+      create: "Create my account"
+
+    edit:
+      title: "Edit"
+      update_your_profile: "Update your profile"
+      change: "change"
+      save_change: Save change
+
+    index:
+      title: "Index"
+      all_user: "All users"
+    user:
+      delete: "delete"
+      confirm: "You sure?"
+
   shared:
     error_messages:
       t1: "The form contains"
       error: "error"
+
   sessions:
     new:
       title: "Log in"
