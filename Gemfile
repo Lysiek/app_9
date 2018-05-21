@@ -18,6 +18,12 @@ gem "jbuilder", "~> 2.5"
 gem "sqlite3"
 gem "bcrypt"
 gem "config"
+<<<<<<< HEAD
+gem "faker", "1.7.3"
+gem "will_paginate", "3.1.6"
+gem "bootstrap-will_paginate", "1.0.0"
+=======
+>>>>>>> abc7fabad2aef0d457ad80f5b3d22a8ed4829cf5
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
