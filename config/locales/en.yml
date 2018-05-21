@@ -48,7 +48,6 @@ en:
   account_not_activated: "Account not activated."
   invalid_active_link: "Invalid activation link"
   checkout_your_email: "Check your email for the activation link."
-
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"

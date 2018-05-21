@@ -14,11 +14,8 @@ module SessionsHelper
       @current_user ||= User.find_by id: user_id
     elsif cookies_id = cookies.signed[:user_id]
       user = User.find_by id: cookies_id
-<<<<<<< HEAD
       if user && user.authenticated?(:remember, cookies[:remember_token])
-=======
-      if user && user.authenticated?(cookies[:remember_token])
->>>>>>> b331a76... chap10
+      @current_user ||= User.find_by id: session[:user_id]
         log_in user
         @current_user = user
       end
@@ -32,10 +29,7 @@ module SessionsHelper
   def log_out
     forget current_user
     session.delete :user_id
-<<<<<<< HEAD
     cookies.delete :user_id
-=======
->>>>>>> b331a76... chap10
     @current_user = nil
   end
 

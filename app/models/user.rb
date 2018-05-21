@@ -1,7 +1,12 @@
 class User < ApplicationRecord
+<<<<<<< HEAD
 
   attr_reader :remember_token, :activation_token
 
+=======
+  attr_accessor :remember_token
+  validates :name, presence: true, length: {maximum: Settings.name.maximum}
+>>>>>>> abc7fabad2aef0d457ad80f5b3d22a8ed4829cf5
   before_save :email_downcase
   before_create :create_activation_digest
 
