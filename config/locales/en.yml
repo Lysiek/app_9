@@ -30,13 +30,24 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello World"
+  hi: "Hi"
+  sample_app: "Sample App"
+  welcome_activate : "Welcome to the Sample App! Click on the link below to activate your account:"
+  activate: "Activate"
   welcome: "Welcome to the Sample App"
   error_user: "User not found"
   danger: "Invalid email/password combination"
-  please_login: "Please log in"
-  user_deleted: "User deleted"
-  profile_update: "Profile update"
+  profile_update: "Profile updated"
+  please_login: "Please log in."
+  user_destroy: "User deleted"
+  account_activation: "Account activation"
+  please_check_activate: "Please check your email to activate your account."
+  click_activate: "Welcome to the Sample App! Click on the link below to activate your account:"
+  account_activated: "Account activated!"
+  account_not_activated: "Account not activated."
+  invalid_active_link: "Invalid activation link"
+  checkout_your_email: "Check your email for the activation link."
 
   layouts:
     application:
@@ -101,27 +112,21 @@ en:
   users:
     new:
       title: "Sign up"
-      h1: "Sign up"
-      p: "This will be a signup page for new users."
-      p1: "Confirmation"
       create: "Create my account"
-
     edit:
-      title: "Edit"
-      update_your_profile: "Update your profile"
-      change: "change"
-      save_change: Save change
-
+      title: "Edit user"
+      update_pro: "Update your profile"
+      confirm: "Confirmation"
+      save: "Save changes"
+      change: "Change"
     index:
-      title: "Index"
-      all_user: "All users"
+      title: "All users"
     user:
-      delete: "delete"
-      you_sure: "You sure?"
-
+      delete: "Delete"
+      confirm: "You sure?"
   shared:
     error_messages:
-      t1: "The form contains"
+      content: "The form contains"
       error: "error"
 
   sessions:
@@ -129,5 +134,4 @@ en:
       title: "Log in"
       signup: "Sign up now!"
       new: "New user?"
-      login: "Log in"
-      s1: "Remember me on this computer"
+      remember: "Remember me on this computer"
