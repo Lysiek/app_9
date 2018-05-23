@@ -19,8 +19,15 @@ gem "sqlite3"
 gem "bcrypt"
 gem "config"
 gem "faker", "1.7.3"
+gem "carrierwave", "1.2.2"
+gem "mini_magic", "4.7.0"
 gem "will_paginate", "3.1.6"
 gem "bootstrap-will_paginate", "1.0.0"
+
+group :production do
+  gem "pg", "0.20.0"
+  gem "fog", "1.42"
+end
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -64,4 +71,9 @@ group :test do
   gem "simplecov-rcov", require: false
   gem "simplecov-json"
   gem "shoulda-matchers"
+  gem "rails-controller-testing", "1.0.2"
+  gem "minitest", "5.10.3"
+  gem "minitest-reporters", "1.1.14"
+  gem "guard", "2.14.1"
+  gem "guard-minitest", "2.4.6"
 end

@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   before_save :email_downcase
   before_create :create_activation_digest
+  has_many :microposts, dependent: :destroy
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
@@ -71,6 +72,10 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
+  def feed
+    microposts.order_desc
+  end
+
   private
 
   def email_downcase
@@ -79,6 +84,6 @@ class User < ApplicationRecord
 
   def create_activation_digest
     @activation_token = User.new_token
-    @activation_digest = User.digest(activation_token)
+    self.activation_digest = User.digest(activation_token)
   end
 end
