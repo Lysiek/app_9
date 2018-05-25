@@ -60,6 +60,10 @@ en:
   password_been_reset: "Password has been reset."
   password_reset_expired: "Password reset has expired."
   user_not_exist: "User doesn't exist"
+  plslogin: "Please login"
+  mic_create: "Micropost created!"
+  mic_del: "Micropost deleted"
+  add_pic: "Should be less than 5MB"
 
   layouts:
     application:
@@ -93,6 +97,8 @@ en:
       h2_2: "sample application."
       content1: "Ruby on Rails Tutorial"
       content2: "Sign up now!"
+      h3: "Micropost Feed"
+      img: "Rails logo"
 
     help:
       title: "Help"
@@ -141,11 +147,19 @@ en:
     user:
       delete: "delete"
       confirm: "You sure?"
+    show:
+      h3: "Microposts"
 
   shared:
     error_messages:
       content: "The form contains"
       error: "error"
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      submit: "Post"
+    user_info:
+      link_to: "View my profile"
+      micropost: "micropost"
 
   sessions:
     new:
@@ -155,11 +169,20 @@ en:
       login: "Log in"
       remember: "Remember me on this computer"
       forgot_password: "(forgot password)"
+
   password_resets:
     new:
       forgot: "Forgot password"
       forgot_password: "Forgot password"
       submit: "Submit"
     edit:
+      title: "Reset password"
       update_password: "Update password"
       confirmation: "Confirmation"
+
+  microposts:
+    micropost:
+      timestamp1: "Posted"
+      timestamp2: "ago."
+      delete: "delete"
+      conf: "You sure?"
