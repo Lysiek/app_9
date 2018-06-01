@@ -27,7 +27,9 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.paginate page: params[:page]
   end
 
-  def edit; end
+  def edit
+    @user = User.find params[:id]
+  end
 
   def update
     if user.update_attributes user_params
@@ -41,6 +43,26 @@ class UsersController < ApplicationController
   def destroy
     return unless user.destroy
     flash[:success] = t "user_destroy"
+    redirect_to users_url
+  end
+
+  def following
+    @title = t "following"
+    find_user
+    @users = user.following.paginate page: params[:page]
+    render "show_follow"
+  end
+
+  def followers
+    @title = t "followers"
+    find_user
+    @users = user.followers.paginate page: params[:page]
+    render "show_follow"
+  end
+
+  def destroy
+    return unless user.destroy
+    flash[:success] = t "delete"
     redirect_to users_url
   end
 

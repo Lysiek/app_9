@@ -1,5 +1,4 @@
 class FollowingController < ApplicationController
-  attr_reader :user
 
   before_action :logged_in_user, :find_user, only: %i(index)
 
@@ -10,6 +9,8 @@ class FollowingController < ApplicationController
   end
 
   private
+
+  attr_reader :user
 
   def find_user
     @user = User.find_by id: params[:id]
