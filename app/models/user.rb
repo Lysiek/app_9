@@ -4,6 +4,14 @@ class User < ApplicationRecord
   before_save :email_downcase
   before_create :create_activation_digest
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: Relationship.name,
+                                  foreign_key: "follower_id",
+                                  dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+                                   foreign_key: "follower_id",
+                                   dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
@@ -73,7 +81,19 @@ class User < ApplicationRecord
   end
 
   def feed
-    microposts.order_desc
+    Micropost.where("user_id IN (:ids) OR user_id = :user_id", ids: following.ids, user_id: id).order_desc
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
   end
 
   private
